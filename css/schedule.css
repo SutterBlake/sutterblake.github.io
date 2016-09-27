@@ -1,0 +1,80 @@
+@font-face {
+  font-family: Ubuntu;
+  src: url(../res/ubuntu/Ubuntu-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: Ubuntu;
+}
+body {
+  background-color: #f3f8f2;
+  display: flex;
+  justify-content: flex-start;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+/* INICIO: schedule */
+#schedule {
+  width: 1193px;
+  margin: auto;
+  margin-top: 50px;
+  border: 2px solid rgba(51, 51, 51, 1);
+}
+#schedule > .line {
+  display: inline-flex;
+}
+#schedule > .line:hover {
+  color: rgba(251, 251, 251, 1);
+  background-color: brown;
+}
+#schedule > .line:hover > .border-right {
+  border-color: white;
+}
+#schedule > .line > .hour-column {
+  width: 125px;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(51, 51, 51, 1);
+}
+#schedule > .line > .border-right {
+  border-right: 2px solid rgba(51, 51, 51, 1);
+}
+#schedule > .line > li {
+  width: 200px;
+  padding: 15px 0px 15px 10px;
+}
+/* FIN: schedule */
+
+/* INICIO: open-something */
+@keyframes buttonAnimation {
+  0% {
+    opacity: 1;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    color: white;
+    background-color: rgba(120, 161, 187, 1);
+  }
+}
+#open-something {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  padding: 8px 16px;
+  cursor: pointer;
+  color: #2F4858;
+  text-decoration: none;
+  background-color: #E8E9EB;
+  border: 2px solid rgba(40, 48, 68, 1);
+}
+#open-something:hover {
+  animation: buttonAnimation 0.3s ease forwards;
+}
+/* FIN: open-something */
+/* FIN: MAIN */
