@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-    <title>Classpage - HOME</title>
+    <title>//ClassPage</title>
     <script src="./js/jquery-2.2.2.min.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
   </head>
@@ -17,7 +17,8 @@
       <ul id="menu">
         <li class="nav-list">Código
           <ul class="dropdown">
-            <li><a href="http://www.w3schools.com/">W3Schools</a></li>
+				 <li><a href="http://www.w3schools.com/">W3Schools</a></li>
+            <li><a href="https://www.codeschool.com/">Codeschool</a></li>
             <li><a href="http://stackoverflow.com/">StackOverflow</a></li>
             <li><a href="https://github.com/">GitHub</a></li>
           </ul>
@@ -48,14 +49,14 @@
     <main id="main">
       <div id="form-section">
         <form class="search-form" submit="">
-          <input type="text" id="searcher" placeholder="Buscar en...">
-          <select class="search-on" id="searchSelection">
-            <option value="">Select</option>
-            <option value="google">Google</option>
-            <option value="ddgo">DuckDuckGo</option>
-          </select>
+          <input type="text" id="searcher" placeholder="Buscar..." autofocus="autofocus">
+			 <input type="text" id="searchSelector" onkeypress="searchByText(event)" onfocus="showNotes()" onblur="hiddeNotes()" placeholder="en...">
         </form>
       </div>
+		<div id="enabledSites">
+			<span class="remark">Google</span>, <span class="remark">YouTube</span>,
+			<span class="remark">Amazon</span>, <span class="remark">DuckDuckGo</span>.
+		</div>
       <div id="webpages">
         <div>
           <h3>Ciclo Superior DAW</h3>
@@ -72,16 +73,6 @@
           <div class="links">
             <ul>
               <li><a href="https://drive.google.com/drive/">Google Drive</a></li>
-              <li><a href="https://keep.google.com/">Google Keep</a></li>
-              <li><a href="https://github.com/">Github</a></li>
-            </ul>
-          </div>
-        </div>
-        <div>
-          <h3>todo list</h3>
-          <div class="links">
-            <ul>
-              <li><a href="http://stackoverflow.com/questions/28305627/getting-json-data-from-text-area">Textarea JSON</a></li>
             </ul>
           </div>
         </div>
@@ -98,29 +89,7 @@
       </div>
     </main>
     <a id="open-something" href="./pages/schedule.html">Schedule!</a>
-
-    <script type="text/javascript">
-      var links = {
-        google: 'https://www.google.es/search?q=',
-        ddgo: 'https://duckduckgo.com/?q='
-      };
-      var emptyLinks = {
-        google: 'https://www.google.es/',
-        ddgo: 'https://duckduckgo.com/'
-      };
-      function searchIn(sel) {
-        var value = sel.target.value;
-        var text = document.getElementById('searcher').value;
-
-        if (value != '' && text != '') {
-          window.open(links[value] + text);
-        }
-        if (value != '' && text == '') {
-          window.open(emptyLinks[value] + text);
-        }
-      };
-
-      document.getElementById("searchSelection").addEventListener("change", searchIn, false);
-    </script>
+	 
+	 <script type="text/javascript" src="./js/main.js"></script>
   </body>
 </html>

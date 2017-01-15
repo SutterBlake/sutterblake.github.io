@@ -110,13 +110,25 @@ div#form-section input#searcher {
   border-bottom: 1px solid #353535;
   background-color: transparent;
 }
-div#form-section select.search-on {
-  padding: 0.6rem 0.8rem;
-  background-color: transparent;
-  border-color: #353535;
+#form-section #searchSelector {
+	width: 80px;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
+	color: #0a00a3;
+   background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #353535;
 }
-div#form-section select.search-on > option {
-  background-color: #f3f8f2;
+#enabledSites {
+	visibility: hidden;
+	width: 600px;
+	float: right;
+	text-align: right;
+	margin-top: 20px;
+}
+.remark {
+	background-color: #FCFC6D;
 }
 /* FIN: Form */
 
