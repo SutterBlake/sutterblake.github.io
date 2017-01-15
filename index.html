@@ -49,7 +49,7 @@
     <main id="main">
       <div id="form-section">
         <form class="search-form" submit="">
-          <input type="text" id="searcher" placeholder="Buscar..." autofocus="autofocus">
+          <input type="text" id="searcher" onkeypress="searchByText(event)" onfocus="showNotes()" onblur="hiddeNotes()" placeholder="Buscar..." autofocus="autofocus">
 			 <input type="text" id="searchSelector" onkeypress="searchByText(event)" onfocus="showNotes()" onblur="hiddeNotes()" placeholder="en...">
         </form>
       </div>
@@ -89,7 +89,7 @@
       </div>
     </main>
     <a id="open-something" href="./pages/schedule.html">Schedule!</a>
-	 
+
 	 <script type="text/javascript" src="./js/main.js"></script>
   </body>
 </html>
